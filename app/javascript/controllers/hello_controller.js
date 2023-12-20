@@ -7,5 +7,6 @@ export default class extends Controller {
     //     $('.hidden-flash').addClass('d-none');
     //   }, 3000);
     // });
+    console.log('123');
   }
 }
