@@ -3,6 +3,7 @@ import '@hotwired/turbo-rails';
 import 'controllers';
 import 'jquery';
 import 'jquery_ujs';
-import 'popper';
+// import 'popper';
 import 'bootstrap';
 import 'select2';
+import '@popperjs/core';
