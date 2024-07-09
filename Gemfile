@@ -23,11 +23,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'letter_opener', '~> 1.8', '>= 1.8.1'
-  gem 'web-console'
-  gem 'sass-rails', '~> 6.0'
   gem 'bootstrap'
   gem 'jquery-rails'
+  gem 'letter_opener', '~> 1.8', '>= 1.8.1'
+  gem 'sass-rails', '~> 6.0'
+  gem 'web-console'
 end
 
 group :test do
