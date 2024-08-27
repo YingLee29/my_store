@@ -1,6 +1,8 @@
 <%= render 'hearder' %>
 <div class="container">
-  <!-- sidebar -->
+  <%
+=begin%>
+ <!-- sidebar -->
   <!-- dien thoai noi bat -->
   <%= render 'featured_phones' %>
   <!-- MÁY TÍNH BẢNG -->
@@ -10,4 +12,18 @@
   <!-- PHỤ KIỆN NỔI BẬT -->
    <%= render 'accessory' %>
 </div>
+<%
+=end%>
+
+<%= form_with url: upload_file_path, method: :post, local: true, multipart: true do |form| %>
+  <div class="form-group">
+    <%= form.label :file, "Choose file to upload:" %>
+    <%= form.file_field :file, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Upload", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
 <%= render 'footer' %>
