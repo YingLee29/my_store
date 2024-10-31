@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+  post "upload_file", to: "base#upload_file"
 end
