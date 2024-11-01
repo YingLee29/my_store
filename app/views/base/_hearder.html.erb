@@ -2,4 +2,7 @@
   <a class="navbar-brand px-5 item-header">
     <%= image_tag "logo.png", style: 'height:50px; width:250px; object-fit: contain;' %>
   </a>
+  <div class="d-flex align-items-center">
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger me-3" %>
+  </div>
 </nav>
