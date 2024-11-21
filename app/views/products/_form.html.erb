@@ -1,0 +1,67 @@
+<%= form_with model: @product, class: "container", local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :product_name, "Product Name" %>
+    <%= f.text_field :product_name, class: "form-control", required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, "Category" %>
+    <%= f.text_field :category, class: "form-control", required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :price, "Price" %>
+    <%= f.number_field :price, class: "form-control", step: 0.01, required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :old_price, "Old Price" %>
+    <%= f.number_field :old_price, class: "form-control", step: 0.01 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :stock_status, "Stock Status" %>
+    <%= f.select :stock_status, [["In Stock", "in_stock"], ["Out of Stock", "out_of_stock"]], class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :new_status, "New Status" %>
+    <%= f.check_box :new_status %>
+    <%= f.label :new_status, "Is New?" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :screen_size, "Screen Size (in inches)" %>
+    <%= f.number_field :screen_size, class: "form-control", step: 0.1 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :refresh_rate, "Refresh Rate (Hz)" %>
+    <%= f.number_field :refresh_rate, class: "form-control", step: 1 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :ram, "RAM (GB)" %>
+    <%= f.number_field :ram, class: "form-control", step: 1 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :storage, "Storage (GB)" %>
+    <%= f.number_field :storage, class: "form-control", step: 1 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :installment, "Installment Available" %>
+    <%= f.check_box :installment %>
+    <%= f.label :installment, "Yes" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :brand, "Brand" %>
+    <%= f.text_field :brand, class: "form-control" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
